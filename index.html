@@ -4,37 +4,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wahat Al Hadaf — Technical Services, Dubai</title>
-  <meta name="description" content="Wahat Al Hadaf Technical Services LLC — Dubai, since 2014. General maintenance, swimming pools, landscaping & irrigation, paving & interlock, gypsum works, ceramics and kitchens.">
+  <meta name="description" content="Wahat Al Hadaf Technical Services LLC, Dubai, since 2014. General maintenance, swimming pools, landscaping and irrigation, paving and interlock, gypsum works, ceramics and kitchens.">
   <meta property="og:title" content="Wahat Al Hadaf — Technical Services, Dubai">
-  <meta property="og:description" content="Think of us as your team. Maintenance, pools, landscaping, paving, gypsum and kitchens in Dubai since 2014.">
-  <meta property="og:image" content="assets/logo.png">
-  <meta name="theme-color" content="#0b2418">
-  <link rel="icon" href="assets/logo.png">
+  <meta property="og:description" content="Maintenance, pools, landscaping, paving, gypsum and kitchens in Dubai since 2014.">
+  <meta property="og:image" content="assets/build/stage-4-complete-2000.webp">
+  <meta name="theme-color" content="#0f2a1d">
+  <link rel="icon" href="assets/logo-mark.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/build/stage-1-blueprint-2000.webp" imagesrcset="assets/build/stage-1-blueprint-1100.webp 1100w, assets/build/stage-1-blueprint-2000.webp 2000w" imagesizes="100vw">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="build-section.css">
 </head>
 <body>
 
-<!-- NAV -->
 <header class="nav" id="nav">
-  <a href="#top" class="nav__brand" aria-label="Wahat Al Hadaf">
-    <img src="assets/logo.png" alt="" width="46" height="31">
-    <span data-i18n="brand">Wahat Al Hadaf</span>
-  </a>
-  <nav class="nav__links" id="navLinks" aria-label="Main">
-    <a href="#services" data-i18n="nav.services">Services</a>
-    <a href="#plans" data-i18n="nav.plans">Plans</a>
-    <a href="#brand" data-i18n="nav.brand">Our Brand</a>
-    <a href="#about" data-i18n="nav.about">About</a>
-    <a href="#contact" data-i18n="nav.contact">Contact</a>
-  </nav>
-  <button class="lang" id="langToggle" type="button" aria-label="Switch language">
-    <span class="lang__ar" lang="ar">عربي</span><span class="lang__en" lang="en">EN</span>
-  </button>
-  <a href="tel:+97142962283" class="btn btn--small nav__cta" data-i18n="nav.call">Call us</a>
-  <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand" aria-label="Wahat Al Hadaf, home">
+      <img src="assets/logo-clean.png" alt="Wahat Al Hadaf Technical Services" width="480" height="318">
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Main">
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#plans" data-i18n="nav.plans">Plans</a>
+      <a href="#brand" data-i18n="nav.brand">Our Brand</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav__end">
+      <button class="lang" id="langToggle" type="button" lang="ar">عربي</button>
+      <a href="tel:+97142962283" class="btn btn--small nav__cta" data-i18n="nav.call">Call us</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+    </div>
+  </div>
 </header>
 
 <main id="top">
@@ -43,84 +45,100 @@
 <section class="hero">
   <div class="wrap hero__grid">
     <div class="hero__copy">
-      <p class="eyebrow reveal"><span class="dot"></span><span data-i18n="hero.eyebrow">Technical Services · Dubai · Since 2014</span></p>
-      <h1 class="hero__title reveal" data-i18n="hero.title">Think of us as<br><em>your team.</em></h1>
-      <p class="hero__lead reveal" data-i18n="hero.lead">Maintenance, pools, gardens, paving, gypsum and kitchens — six trades, one reliable team, and one number to call for your villa, office or building.</p>
-      <div class="hero__actions reveal">
-        <a href="#contact" class="btn"><span data-i18n="hero.cta1">Request a quote</span> <i class="arr" aria-hidden="true">→</i></a>
-        <a href="#services" class="btn btn--ghost" data-i18n="hero.cta2">Explore services</a>
+      <h1 class="hero__title" data-i18n="hero.title">Think of us as your team.</h1>
+      <p class="hero__lead" data-i18n="hero.lead">A Dubai technical services contractor since 2014. Maintenance, pools, gardens, paving, gypsum and kitchens, handled by one crew and one phone number.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn" data-i18n="hero.cta1">Request a quote</a>
+        <a href="#services" class="link" data-i18n="hero.cta2">See what we do</a>
       </div>
-      <ul class="hero__facts reveal">
-        <li><strong>2014</strong><span data-i18n="hero.f1">Established in Dubai</span></li>
-        <li><strong>06</strong><span data-i18n="hero.f2">Specialist trades</span></li>
-        <li><strong>01</strong><span data-i18n="hero.f3">Point of contact</span></li>
-      </ul>
     </div>
-    <figure class="hero__photo reveal">
+    <figure class="hero__photo">
       <img src="assets/hero-team.jpg" alt="Technicians in safety gear working by a high-rise window" width="1064" height="1054">
-      <figcaption>
-        <span class="ar-name" lang="ar">واحة الهدف</span>
-        <span data-i18n="hero.caption">Facilities management &amp; MEP contracting</span>
-      </figcaption>
     </figure>
-  </div>
-
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track" id="ticker"></div>
   </div>
 </section>
 
-<!-- SERVICES EXPLORER -->
+<!-- FROM BLUEPRINT TO REALITY (standalone, see build-section.js) -->
+<section class="build" id="build" aria-labelledby="buildTitle">
+  <div class="build__stage">
+    <div class="build__camera">
+      <img class="build__frame" data-frame="0" alt="" decoding="async" fetchpriority="high"
+           src="assets/build/stage-1-blueprint-2000.webp"
+           srcset="assets/build/stage-1-blueprint-1100.webp 1100w, assets/build/stage-1-blueprint-2000.webp 2000w" sizes="100vw">
+      <img class="build__frame" data-frame="1" alt="" decoding="async"
+           src="assets/build/stage-2-structure-2000.webp"
+           srcset="assets/build/stage-2-structure-1100.webp 1100w, assets/build/stage-2-structure-2000.webp 2000w" sizes="100vw">
+      <img class="build__frame" data-frame="2" alt="" decoding="async"
+           src="assets/build/stage-3-envelope-2000.webp"
+           srcset="assets/build/stage-3-envelope-1100.webp 1100w, assets/build/stage-3-envelope-2000.webp 2000w" sizes="100vw">
+      <img class="build__frame" data-frame="3" alt="A completed contemporary villa at dusk with a lit pool, palms and an interlock driveway" decoding="async"
+           src="assets/build/stage-4-complete-2000.webp"
+           srcset="assets/build/stage-4-complete-1100.webp 1100w, assets/build/stage-4-complete-2000.webp 2000w" sizes="100vw">
+      <span class="build__scan" aria-hidden="true"></span>
+    </div>
+    <div class="build__shade" aria-hidden="true"></div>
+
+    <ol class="build__steps" aria-label="Project stages">
+      <li class="is-active"><span>1</span><b data-i18n="build.s1">Drawing</b></li>
+      <li><span>2</span><b data-i18n="build.s2">Structure</b></li>
+      <li><span>3</span><b data-i18n="build.s3">Envelope</b></li>
+      <li><span>4</span><b data-i18n="build.s4">Handover</b></li>
+      <i class="build__bar" aria-hidden="true"><i></i></i>
+    </ol>
+
+    <div class="build__end">
+      <h2 id="buildTitle" class="build__title" data-i18n="build.title">From Vision to Reality</h2>
+      <p class="build__sub" data-i18n="build.sub">Pools, landscapes, paving, gypsum and fit-out, delivered by one team from the first line on paper to the day you move in.</p>
+      <a href="https://www.instagram.com/wahatalhadaf" target="_blank" rel="noopener" class="btn btn--light" data-i18n="build.cta">Explore Our Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
 <section class="section" id="services">
   <div class="wrap">
     <div class="section__head">
-      <p class="eyebrow reveal"><span class="dot"></span><span data-i18n="svc.eyebrow">Services</span></p>
-      <h2 class="reveal" data-i18n="svc.title">Six trades. <em>One trusted team.</em></h2>
-      <p class="section__lead reveal" data-i18n="svc.lead">Pick a service to see exactly what’s included. Every job is done by our own qualified crew — from first site visit to final finish.</p>
+      <h2 data-i18n="svc.title">Six trades, one team</h2>
+      <p class="section__lead" data-i18n="svc.lead">Pick a service to see exactly what’s included. Every job is done by our own qualified crew, from the first site visit to the final finish.</p>
     </div>
-
-    <div class="explorer reveal">
+    <div class="explorer">
       <div class="explorer__tabs" role="tablist" id="svcTabs" aria-label="Services"></div>
-      <div class="explorer__panel" id="svcPanel" role="tabpanel" aria-live="polite"></div>
+      <div class="explorer__panel" id="svcPanel" role="tabpanel"></div>
     </div>
   </div>
 </section>
 
 <!-- PLANS -->
-<section class="section section--tight" id="plans">
+<section class="section section--rule" id="plans">
   <div class="wrap">
     <div class="section__head">
-      <p class="eyebrow reveal"><span class="dot"></span><span data-i18n="plans.eyebrow">Ways to work with us</span></p>
-      <h2 class="reveal" data-i18n="plans.title">One job, or <em>all year round.</em></h2>
+      <h2 data-i18n="plans.title">One job, or all year round</h2>
     </div>
     <div class="plans">
-      <article class="plan reveal">
-        <span class="plan__k">A</span>
+      <article class="plan">
         <h3 data-i18n="plans.p1.t">One-time job</h3>
         <p data-i18n="plans.p1.d">A repair, an upgrade or a single installation. We visit, assess and send a clear quote before any work begins.</p>
         <ul>
-          <li data-i18n="plans.p1.l1">Site visit &amp; inspection</li>
+          <li data-i18n="plans.p1.l1">Site visit and inspection</li>
           <li data-i18n="plans.p1.l2">Itemised quotation</li>
           <li data-i18n="plans.p1.l3">Workmanship you can rely on</li>
         </ul>
       </article>
-      <article class="plan plan--main reveal">
-        <span class="plan__tag" data-i18n="plans.p2.tag">Most chosen</span>
-        <span class="plan__k">B</span>
+      <article class="plan plan--main">
         <h3 data-i18n="plans.p2.t">Annual Maintenance Contract</h3>
         <p data-i18n="plans.p2.d">Preventive visits on a schedule, priority call-outs when something breaks, and one plan for the whole year.</p>
         <ul>
-          <li data-i18n="plans.p2.l1">Scheduled AC, electrical &amp; plumbing checks</li>
+          <li data-i18n="plans.p2.l1">Scheduled AC, electrical and plumbing checks</li>
           <li data-i18n="plans.p2.l2">Priority response for repairs</li>
-          <li data-i18n="plans.p2.l3">Pool &amp; garden care can be added</li>
+          <li data-i18n="plans.p2.l3">Pool and garden care can be added</li>
         </ul>
+        <a href="#contact" class="btn btn--light btn--small" data-i18n="plans.p2.cta">Ask about an AMC</a>
       </article>
-      <article class="plan reveal">
-        <span class="plan__k">C</span>
+      <article class="plan">
         <h3 data-i18n="plans.p3.t">Turnkey project</h3>
-        <p data-i18n="plans.p3.d">New pools, landscapes, kitchens and fit-outs — designed, supplied and built by one team, start to finish.</p>
+        <p data-i18n="plans.p3.d">New pools, landscapes, kitchens and fit-outs, designed, supplied and built by one team from start to finish.</p>
         <ul>
-          <li data-i18n="plans.p3.l1">Design &amp; material selection</li>
+          <li data-i18n="plans.p3.l1">Design and material selection</li>
           <li data-i18n="plans.p3.l2">Supply through our trading partners</li>
           <li data-i18n="plans.p3.l3">Single point of responsibility</li>
         </ul>
@@ -132,54 +150,51 @@
 <!-- BRAND AWARENESS -->
 <section class="section brand" id="brand">
   <div class="wrap">
-    <div class="section__head">
-      <p class="eyebrow reveal"><span class="dot"></span><span data-i18n="brand.eyebrow">Know the brand</span></p>
-      <h2 class="reveal" data-i18n="brand.title">An oasis with <em>a purpose.</em></h2>
-      <p class="section__lead reveal" data-i18n="brand.lead"><span lang="ar" class="ar-name">واحة الهدف</span> — <strong>Wahat Al Hadaf</strong> means “Oasis of the Goal.” It’s the promise behind every job: a place where your property is cared for, and your goals are met.</p>
-    </div>
-
-    <div class="brand__grid">
-      <article class="brand__story reveal">
-        <div class="brand__logo"><img src="assets/logo.png" alt="Wahat Al Hadaf logo" width="551" height="372"></div>
-        <h3 data-i18n="brand.mark">Behind the mark</h3>
-        <ul class="brand__meaning">
-          <li><span class="sw sw--green"></span><p data-i18n="brand.m1"><strong>The rooftops</strong> — the homes, villas and buildings we look after every day.</p></li>
-          <li><span class="sw sw--lime"></span><p data-i18n="brand.m2"><strong>The arc</strong> — the oasis canopy: shelter, growth and long-term care.</p></li>
-          <li><span class="sw sw--gold"></span><p data-i18n="brand.m3"><strong>The gold</strong> — our standard of quality, with no compromises.</p></li>
-        </ul>
-      </article>
-
-      <div class="brand__values">
-        <article class="value reveal"><span class="value__k">01</span><div><h3 data-i18n="brand.v1.t">Every client is a long-term relationship</h3><p data-i18n="brand.v1.d">We visit, listen and keep an open line — building a plan around your goals and budget.</p></div></article>
-        <article class="value reveal"><span class="value__k">02</span><div><h3 data-i18n="brand.v2.t">Clean, safe, better spaces</h3><p data-i18n="brand.v2.d">An environment that is clean, safe, and an enhancement to every day.</p></div></article>
-        <article class="value reveal"><span class="value__k">03</span><div><h3 data-i18n="brand.v3.t">Fair, ethical, honest</h3><p data-i18n="brand.v3.d">With clients, staff and vendors alike. Treat people how you want to be treated.</p></div></article>
+    <div class="brand__intro">
+      <img class="brand__logo" src="assets/logo-clean.png" alt="Wahat Al Hadaf logo: green rooftops under a sweeping arc, with gold lettering" width="480" height="318">
+      <div>
+        <h2 data-i18n="brand.title">An oasis with a purpose</h2>
+        <p class="brand__lead" data-i18n="brand.lead"><span lang="ar" class="ar-name">واحة الهدف</span>, <strong>Wahat Al Hadaf</strong>, means “Oasis of the Goal.” It’s the promise behind every job: a place where your property is looked after and your goals are met.</p>
       </div>
     </div>
 
-    <blockquote class="brand__quote reveal"><p data-i18n="brand.quote">“No problem is too small, no job too big, and no client taken for granted.”</p></blockquote>
+    <div class="brand__cols">
+      <div class="brand__mark">
+        <h3 data-i18n="brand.mark">Behind the mark</h3>
+        <dl>
+          <div><dt><span class="sw sw--green"></span><span data-i18n="brand.m1t">The rooftops</span></dt><dd data-i18n="brand.m1">The homes, villas and buildings we look after every day.</dd></div>
+          <div><dt><span class="sw sw--lime"></span><span data-i18n="brand.m2t">The arc</span></dt><dd data-i18n="brand.m2">The oasis canopy: shelter, growth and long-term care.</dd></div>
+          <div><dt><span class="sw sw--gold"></span><span data-i18n="brand.m3t">The gold</span></dt><dd data-i18n="brand.m3">Our standard of quality, with no compromises.</dd></div>
+        </dl>
+      </div>
+      <div class="brand__values">
+        <h3 data-i18n="brand.vals">What we hold to</h3>
+        <dl>
+          <div><dt data-i18n="brand.v1.t">Every client is a long-term relationship</dt><dd data-i18n="brand.v1.d">We visit, listen and keep an open line, building a plan around your goals and budget.</dd></div>
+          <div><dt data-i18n="brand.v2.t">Clean, safe, better spaces</dt><dd data-i18n="brand.v2.d">An environment that is clean, safe, and makes every day a little better.</dd></div>
+          <div><dt data-i18n="brand.v3.t">Fair, ethical, honest</dt><dd data-i18n="brand.v3.d">With clients, staff and vendors alike. Treat people how you want to be treated.</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <blockquote class="brand__quote"><p data-i18n="brand.quote">“No problem is too small, no job too big, and no client taken for granted.”</p></blockquote>
 
     <div class="social">
-      <div class="social__intro reveal">
+      <div class="social__intro">
         <h3 data-i18n="brand.social.t">See our work as it happens</h3>
-        <p data-i18n="brand.social.d">Before-and-afters, site updates and project reels. Tag us <strong>#WahatAlHadaf</strong> and help share the oasis.</p>
+        <p data-i18n="brand.social.d">Before-and-afters, site updates and project reels. Tag us <strong>#WahatAlHadaf</strong> and help spread the word.</p>
         <div class="social__share">
           <button class="btn btn--light btn--small" id="shareBtn" type="button" data-i18n="brand.share">Share this site</button>
           <span class="social__toast" id="shareToast" role="status" aria-live="polite"></span>
         </div>
       </div>
-      <a class="social__card reveal" href="https://www.instagram.com/reels/Ddr-5UKIKcd/" target="_blank" rel="noopener">
-        <span class="social__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill"/></svg></span>
-        <span class="social__label">Instagram</span>
-        <strong data-i18n="brand.ig">Watch our latest reel</strong>
-        <span class="social__handle">@wahatalhadaf</span>
-        <span class="social__go" aria-hidden="true">↗</span>
+      <a class="social__card" href="https://www.instagram.com/reels/Ddr-5UKIKcd/" target="_blank" rel="noopener">
+        <svg class="social__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill"/></svg>
+        <span><strong data-i18n="brand.ig">Watch our latest reel</strong><small>Instagram, @wahatalhadaf</small></span>
       </a>
-      <a class="social__card reveal" href="https://www.facebook.com/wahat.alhadaf.2025" target="_blank" rel="noopener">
-        <span class="social__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8Z"/></svg></span>
-        <span class="social__label">Facebook</span>
-        <strong data-i18n="brand.fb">Follow our page</strong>
-        <span class="social__handle">Wahat Al Hadaf</span>
-        <span class="social__go" aria-hidden="true">↗</span>
+      <a class="social__card" href="https://www.facebook.com/wahat.alhadaf.2025" target="_blank" rel="noopener">
+        <svg class="social__icon" viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8Z"/></svg>
+        <span><strong data-i18n="brand.fb">Follow our page</strong><small>Facebook, Wahat Al Hadaf</small></span>
       </a>
     </div>
   </div>
@@ -188,22 +203,19 @@
 <!-- ABOUT + PROCESS -->
 <section class="section" id="about">
   <div class="wrap about__grid">
-    <div>
-      <p class="eyebrow reveal"><span class="dot"></span><span data-i18n="about.eyebrow">About us</span></p>
-      <h2 class="reveal" data-i18n="about.title">Engineering excellence, <em>since 2014.</em></h2>
-    </div>
+    <h2 data-i18n="about.title">Engineering excellence since 2014</h2>
     <div class="about__body">
-      <p class="about__big reveal" data-i18n="about.p1">Wahat Al Hadaf Technical Services LLC was founded in Dubai in 2014 to deliver engineering excellence in the civil and electromechanical fields. Today we are a facilities management and MEP contractor trusted for workmanship, fair pricing and results.</p>
-      <p class="reveal" data-i18n="about.p2">Our mission is to be the one-contact solution, any time. A loyal, experienced team — backed by our trading division’s links with leading brands — means quality products and dependable work on every project.</p>
+      <p class="about__big" data-i18n="about.p1">Wahat Al Hadaf Technical Services LLC was founded in Dubai in 2014 to deliver engineering excellence in the civil and electromechanical fields. Today we are a facilities management and MEP contractor trusted for workmanship, fair pricing and results.</p>
+      <p data-i18n="about.p2">Our mission is to be the one-contact solution, any time. A loyal, experienced team, backed by our trading division’s links with leading brands, means quality products and dependable work on every project.</p>
     </div>
   </div>
-
   <div class="wrap">
+    <h3 class="steps__title" data-i18n="steps.title">How a job runs</h3>
     <ol class="steps">
-      <li class="step reveal"><span>01</span><h3 data-i18n="step1.t">Reach out</h3><p data-i18n="step1.d">Call, WhatsApp or send a request.</p></li>
-      <li class="step reveal"><span>02</span><h3 data-i18n="step2.t">Site visit</h3><p data-i18n="step2.d">We inspect and understand your goals and budget.</p></li>
-      <li class="step reveal"><span>03</span><h3 data-i18n="step3.t">Clear proposal</h3><p data-i18n="step3.d">A transparent scope and quote — no surprises.</p></li>
-      <li class="step reveal"><span>04</span><h3 data-i18n="step4.t">Deliver &amp; maintain</h3><p data-i18n="step4.d">Quality work on schedule, and care that continues.</p></li>
+      <li><span>1</span><h4 data-i18n="step1.t">Reach out</h4><p data-i18n="step1.d">Call, WhatsApp or send a request.</p></li>
+      <li><span>2</span><h4 data-i18n="step2.t">Site visit</h4><p data-i18n="step2.d">We inspect and understand your goals and budget.</p></li>
+      <li><span>3</span><h4 data-i18n="step3.t">Clear proposal</h4><p data-i18n="step3.d">A transparent scope and quote, with no surprises.</p></li>
+      <li><span>4</span><h4 data-i18n="step4.t">Deliver and maintain</h4><p data-i18n="step4.d">Quality work on schedule, and care that continues.</p></li>
     </ol>
   </div>
 </section>
@@ -212,30 +224,25 @@
 <section class="section contact" id="contact">
   <div class="wrap contact__grid">
     <div>
-      <p class="eyebrow reveal"><span class="dot"></span><span data-i18n="contact.eyebrow">Contact</span></p>
-      <h2 class="reveal" data-i18n="contact.title">Let’s get your <em>project moving.</em></h2>
-      <p class="section__lead reveal" data-i18n="contact.lead">Tell us what you need and we’ll come back with a plan.</p>
+      <h2 data-i18n="contact.title">Let’s get your project moving</h2>
+      <p class="section__lead" data-i18n="contact.lead">Tell us what you need and we’ll come back with a plan.</p>
       <dl class="contact__list">
-        <div class="reveal"><dt data-i18n="contact.phone">Phone</dt><dd><a href="tel:+97142962283" dir="ltr">+971 4 296 2283</a></dd></div>
-        <div class="reveal"><dt data-i18n="contact.mobile">Mobile / WhatsApp</dt><dd><a href="https://wa.me/971509015012" target="_blank" rel="noopener" dir="ltr">+971 50 901 5012</a></dd></div>
-        <div class="reveal"><dt data-i18n="contact.email">Email</dt><dd><a href="mailto:info@w-alhadaf.com">info@w-alhadaf.com</a></dd></div>
-        <div class="reveal"><dt data-i18n="contact.fax">Fax</dt><dd dir="ltr">+971 4 296 2285</dd></div>
-        <div class="reveal"><dt data-i18n="contact.office">Office</dt><dd data-i18n="contact.address">City Gate Building, Office M02-01<br>Port Saeed, Deira — Dubai, UAE</dd></div>
+        <div><dt data-i18n="contact.phone">Phone</dt><dd><a href="tel:+97142962283" dir="ltr">+971 4 296 2283</a></dd></div>
+        <div><dt data-i18n="contact.mobile">Mobile / WhatsApp</dt><dd><a href="https://wa.me/971509015012" target="_blank" rel="noopener" dir="ltr">+971 50 901 5012</a></dd></div>
+        <div><dt data-i18n="contact.email">Email</dt><dd><a href="mailto:info@w-alhadaf.com">info@w-alhadaf.com</a></dd></div>
+        <div><dt data-i18n="contact.fax">Fax</dt><dd dir="ltr">+971 4 296 2285</dd></div>
+        <div><dt data-i18n="contact.office">Office</dt><dd data-i18n="contact.address">City Gate Building, Office M02-01<br>Port Saeed, Deira, Dubai, UAE</dd></div>
       </dl>
     </div>
-
-    <form class="form reveal" id="quoteForm" novalidate>
+    <form class="form" id="quoteForm" novalidate>
       <h3 data-i18n="form.title">Request a quote</h3>
       <label><span data-i18n="form.name">Your name</span><input name="name" type="text" autocomplete="name" required></label>
       <label><span data-i18n="form.phone">Phone</span><input name="phone" type="tel" autocomplete="tel" required dir="ltr"></label>
-      <label><span data-i18n="form.service">Service</span>
-        <select name="service" id="serviceSelect" required></select>
-      </label>
-      <label><span data-i18n="form.details">Project details</span>
-        <textarea name="details" rows="4" data-i18n-ph="form.ph"></textarea>
-      </label>
-      <button class="btn btn--block" type="submit"><span data-i18n="form.send">Send via WhatsApp</span> <i class="arr" aria-hidden="true">→</i></button>
-      <p class="form__note" data-i18n="form.note">Opens WhatsApp with your details filled in. Prefer email? <a href="mailto:info@w-alhadaf.com">info@w-alhadaf.com</a></p>
+      <label><span data-i18n="form.service">Service</span><select name="service" id="serviceSelect" required></select></label>
+      <label><span data-i18n="form.details">Project details</span><textarea name="details" rows="4" data-i18n-ph="form.ph"></textarea></label>
+      <p class="form__error" id="formError" role="alert" hidden data-i18n="form.error">Add your name, phone and a service so we can reply.</p>
+      <button class="btn btn--block" type="submit" data-i18n="form.send">Send on WhatsApp</button>
+      <p class="form__note" data-i18n="form.note">This opens WhatsApp with your details filled in. Prefer email? <a href="mailto:info@w-alhadaf.com">info@w-alhadaf.com</a></p>
     </form>
   </div>
 </section>
@@ -245,8 +252,8 @@
 <footer class="footer">
   <div class="wrap footer__grid">
     <div class="footer__brand">
-      <img src="assets/logo.png" alt="Wahat Al Hadaf Technical Services" width="140" height="94">
-      <p data-i18n="footer.motto">Always act fairly, ethically and honestly — with our employees, customers and vendors. Treat people how you want to be treated.</p>
+      <img src="assets/logo-clean.png" alt="Wahat Al Hadaf Technical Services" width="480" height="318">
+      <p data-i18n="footer.motto">Always act fairly, ethically and honestly with our employees, customers and vendors. Treat people how you want to be treated.</p>
     </div>
     <nav aria-label="Footer">
       <h4 data-i18n="footer.explore">Explore</h4>
@@ -272,7 +279,10 @@
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.7-.2 1.3Z"/></svg>
 </a>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="i18n.js"></script>
 <script src="script.js"></script>
+<script src="build-section.js"></script>
 </body>
 </html>

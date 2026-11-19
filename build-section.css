@@ -1,0 +1,130 @@
+/* "From Blueprint to Reality" — standalone pinned section.
+   Self-contained: only depends on --font/--lime tokens with fallbacks. */
+.build {
+  --b-ink: #0b1a24;
+  --b-line: #9fd0e6;
+  --b-accent: var(--lime, #8cc63f);
+  position: relative;
+  background: var(--b-ink);
+  color: #fff;
+}
+.build__stage {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+}
+.build__camera {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 60%;
+  will-change: transform;
+}
+.build__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% 62%;
+  transform-origin: 50% 70%;
+  will-change: clip-path, transform;
+}
+/* Without JS the completed building (last frame) sits on top. */
+.build__scan {
+  position: absolute;
+  inset-inline: 0;
+  top: 100%;
+  height: 2px;
+  background: var(--b-line);
+  box-shadow: 0 0 18px 2px rgba(159, 208, 230, .55);
+  opacity: 0;
+  pointer-events: none;
+}
+.build__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(6, 14, 20, .92) 0%, rgba(6, 14, 20, .55) 32%, rgba(6, 14, 20, 0) 62%);
+  pointer-events: none;
+}
+
+/* Stage indicator: the content is a real sequence, so numbers carry meaning here. */
+.build__steps {
+  position: absolute;
+  z-index: 2;
+  top: calc(96px + 2vh);
+  inset-inline-start: max(16px, calc((100vw - 1180px) / 2));
+  display: flex;
+  gap: clamp(.9rem, 2.4vw, 2rem);
+  margin: 0;
+  padding: 0 0 .9rem;
+  list-style: none;
+  font-size: .9rem;
+}
+.build__steps li {
+  display: flex;
+  align-items: baseline;
+  gap: .45rem;
+  color: rgba(255, 255, 255, .5);
+  transition: color .3s;
+}
+.build__steps li span { font-variant-numeric: tabular-nums; font-size: .8rem; }
+.build__steps li b { font-weight: 500; }
+.build__steps li.is-active { color: #fff; }
+.build__steps li.is-active span { color: var(--b-accent); }
+.build__bar {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, .2);
+}
+.build__bar i {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  background: var(--b-accent);
+  transform: scaleX(var(--p, 1));
+  transform-origin: left center;
+}
+[dir="rtl"] .build__bar i { transform-origin: right center; }
+
+.build__end {
+  position: absolute;
+  z-index: 2;
+  bottom: clamp(2.5rem, 9vh, 6rem);
+  inset-inline-start: max(16px, calc((100vw - 1180px) / 2));
+  width: min(40rem, calc(100% - 32px));
+}
+.build__title {
+  margin: 0;
+  font-size: clamp(2.6rem, 6.6vw, 5.8rem);
+  font-weight: 600;
+  font-stretch: 118%;
+  line-height: 1;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+  color: #fff;
+}
+html[lang="ar"] .build__title { font-stretch: normal; letter-spacing: 0; line-height: 1.25; }
+.build__sub {
+  margin: 1.1rem 0 1.8rem;
+  max-width: 34rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, .78);
+}
+
+/* Portrait: frame the building in the upper area, text in the dark band below. */
+@media (max-aspect-ratio: 1/1) {
+  .build__camera { inset: 0 0 auto; top: 18svh; height: 50svh; }
+  .build__frame { object-position: 52% 60%; }
+  .build__shade { background: linear-gradient(to top, var(--b-ink) 30%, rgba(11, 26, 36, 0) 52%); }
+  .build__steps { top: calc(84px + 1vh); font-size: .82rem; }
+  .build__steps li b { display: none; }
+  .build__steps li.is-active b { display: inline; }
+  .build__end { bottom: 2.2rem; }
+  .build__sub { font-size: 1rem; }
+}
