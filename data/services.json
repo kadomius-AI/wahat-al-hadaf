@@ -1,0 +1,248 @@
+[
+ {
+  "id": "maintenance",
+  "icon": "M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.4-.4-2.4 2.4-2.8Z",
+  "en": {
+   "name": "General Maintenance",
+   "short": "Electrical, plumbing, AC & repairs",
+   "desc": "Planned and reactive maintenance that keeps villas, offices and buildings running smoothly — one team, one point of contact, and work done right the first time.",
+   "items": [
+    "Electrical repairs, sockets & lighting",
+    "Plumbing, leaks & water heaters",
+    "AC servicing & duct cleaning",
+    "Painting & wall repairs",
+    "Carpentry, doors & locks",
+    "Preventive maintenance visits"
+   ],
+   "ideal": [
+    "Villas",
+    "Offices",
+    "Residential buildings",
+    "Retail units"
+   ]
+  },
+  "ar": {
+   "name": "الصيانة العامة",
+   "short": "كهرباء، سباكة، تكييف وإصلاحات",
+   "desc": "صيانة مخطّطة وطارئة تحافظ على عمل الفلل والمكاتب والمباني بسلاسة — فريق واحد، وجهة تواصل واحدة، وعمل يُنجز بإتقان من المرة الأولى.",
+   "items": [
+    "إصلاحات الكهرباء والمقابس والإنارة",
+    "السباكة وتسربات المياه وسخانات المياه",
+    "صيانة المكيفات وتنظيف مجاري الهواء",
+    "الدهانات وإصلاح الجدران",
+    "النجارة والأبواب والأقفال",
+    "زيارات الصيانة الوقائية"
+   ],
+   "ideal": [
+    "الفلل",
+    "المكاتب",
+    "المباني السكنية",
+    "المحلات التجارية"
+   ]
+  }
+ },
+ {
+  "id": "pools",
+  "icon": "M2 18c2 0 2-1.5 4-1.5S8 18 10 18s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 14c2 0 2-1.5 4-1.5S8 14 10 14s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M8 12V5a2 2 0 0 1 4 0M16 12V5a2 2 0 0 0-4 0",
+  "en": {
+   "name": "Swimming Pools",
+   "short": "Build, renovate & maintain",
+   "desc": "From new builds to tired pools that need new life — we construct, renovate and maintain pools made for the UAE climate, with clear water all year.",
+   "items": [
+    "New pool construction",
+    "Renovation & re-tiling",
+    "Pumps, filtration & pool lighting",
+    "Water features & jacuzzis",
+    "Leak detection & repair",
+    "Weekly cleaning & water balancing"
+   ],
+   "ideal": [
+    "Private villas",
+    "Compounds",
+    "Hotels & clubs"
+   ]
+  },
+  "ar": {
+   "name": "المسابح",
+   "short": "إنشاء وتجديد وصيانة",
+   "desc": "من إنشاء مسابح جديدة إلى تجديد المسابح القديمة — نبني ونجدد ونصون مسابح مصممة لمناخ الإمارات، بمياه صافية طوال العام.",
+   "items": [
+    "إنشاء مسابح جديدة",
+    "التجديد وإعادة التبليط",
+    "المضخات والفلاتر وإنارة المسبح",
+    "النوافير والجاكوزي",
+    "كشف التسربات وإصلاحها",
+    "تنظيف أسبوعي وموازنة المياه"
+   ],
+   "ideal": [
+    "الفلل الخاصة",
+    "المجمعات السكنية",
+    "الفنادق والنوادي"
+   ]
+  }
+ },
+ {
+  "id": "landscaping",
+  "icon": "M12 22V11M12 11c0-4 3-7 8-7 0 5-3 7-8 7ZM12 14c0-3-2.5-5-6.5-5 0 4 2.5 5 6.5 5ZM6 22h12",
+  "en": {
+   "name": "Landscaping & Irrigation",
+   "short": "Gardens built for the heat",
+   "desc": "Outdoor spaces designed to look good and thrive in the heat — with automatic irrigation that waters precisely and saves water.",
+   "items": [
+    "Garden design & planting",
+    "Natural & artificial grass",
+    "Automatic drip & sprinkler irrigation",
+    "Pergolas, seating & outdoor lighting",
+    "Trees, palms & hedges",
+    "Scheduled garden maintenance"
+   ],
+   "ideal": [
+    "Villa gardens",
+    "Roof terraces",
+    "Community areas"
+   ]
+  },
+  "ar": {
+   "name": "تنسيق الحدائق والري",
+   "short": "حدائق مصممة لتحمّل الحرارة",
+   "desc": "مساحات خارجية جميلة ومصممة لتزدهر في الحرارة — مع أنظمة ري أوتوماتيكية دقيقة توفّر المياه.",
+   "items": [
+    "تصميم الحدائق والزراعة",
+    "العشب الطبيعي والصناعي",
+    "أنظمة الري بالتنقيط والرشاشات",
+    "البرجولات والجلسات والإنارة الخارجية",
+    "الأشجار والنخيل والسياج النباتي",
+    "صيانة دورية للحدائق"
+   ],
+   "ideal": [
+    "حدائق الفلل",
+    "أسطح المباني",
+    "المناطق المشتركة"
+   ]
+  }
+ },
+ {
+  "id": "paving",
+  "icon": "M3 4h8v5H3zM13 4h8v5h-8zM3 11h5v4H3zM10 11h11v4H10zM3 17h11v4H3zM16 17h5v4h-5z",
+  "en": {
+   "name": "Paving & Interlock",
+   "short": "Driveways, walkways & courtyards",
+   "desc": "Interlock and stone laid on a properly prepared, compacted base — so driveways and walkways stay level, drain well and last for years.",
+   "items": [
+    "Interlock paving",
+    "Kerbstones & edging",
+    "Natural stone & outdoor tiles",
+    "Driveways & parking areas",
+    "Base preparation & compaction",
+    "Repair & re-levelling"
+   ],
+   "ideal": [
+    "Driveways",
+    "Courtyards",
+    "Pool decks",
+    "Parking areas"
+   ]
+  },
+  "ar": {
+   "name": "الأرضيات والإنترلوك",
+   "short": "الممرات والمداخل والساحات",
+   "desc": "تركيب الإنترلوك والحجر على قاعدة مجهّزة ومدكوكة بشكل صحيح — لتبقى المداخل والممرات مستوية، جيدة التصريف، وتدوم لسنوات.",
+   "items": [
+    "تركيب الإنترلوك",
+    "البردورات والحواف",
+    "الحجر الطبيعي والبلاط الخارجي",
+    "مداخل السيارات ومواقفها",
+    "تجهيز القاعدة والدك",
+    "الإصلاح وإعادة التسوية"
+   ],
+   "ideal": [
+    "مداخل السيارات",
+    "الساحات",
+    "محيط المسابح",
+    "المواقف"
+   ]
+  }
+ },
+ {
+  "id": "gypsum",
+  "icon": "M3 21V8l9-5 9 5v13M3 12h18M8 12v9M16 12v9M3 16.5h18",
+  "en": {
+   "name": "Gypsum & Technical Works",
+   "short": "Ceilings, partitions & lighting",
+   "desc": "Gypsum (Gibson) board ceilings and partitions with clean lines — hiding services neatly and building lighting right into the design.",
+   "items": [
+    "False ceilings",
+    "Gypsum partitions",
+    "Cove & concealed lighting",
+    "Decorative cornices & bulkheads",
+    "Access panels for AC & services",
+    "Finishing & painting"
+   ],
+   "ideal": [
+    "Living rooms",
+    "Majlis",
+    "Offices",
+    "Shops"
+   ]
+  },
+  "ar": {
+   "name": "أعمال الجبس والأعمال الفنية",
+   "short": "أسقف وقواطع وإنارة",
+   "desc": "أسقف وقواطع من ألواح الجبس (جبسون بورد) بخطوط نظيفة — تُخفي التمديدات بأناقة وتدمج الإنارة في التصميم.",
+   "items": [
+    "الأسقف المعلّقة",
+    "قواطع الجبس",
+    "الإنارة المخفية",
+    "الكرانيش والديكورات",
+    "فتحات الصيانة للتكييف والتمديدات",
+    "التشطيب والدهان"
+   ],
+   "ideal": [
+    "غرف المعيشة",
+    "المجالس",
+    "المكاتب",
+    "المحلات"
+   ]
+  }
+ },
+ {
+  "id": "kitchens",
+  "icon": "M3 10h18v11H3zM3 10V4h18v6M8 4v6M12 14h6M7 14h1M7 17h1",
+  "en": {
+   "name": "Ceramic & Kitchen Design",
+   "short": "Tiles, bathrooms & kitchens",
+   "desc": "Floors, walls, bathrooms and kitchens — designed, supplied and installed by one team, with quality products from our trading partners.",
+   "items": [
+    "Ceramic, porcelain & marble tiling",
+    "Bathroom renovation",
+    "Custom kitchen design",
+    "Cabinets & countertops",
+    "Sink & appliance installation",
+    "Waterproofing & grouting"
+   ],
+   "ideal": [
+    "Kitchens",
+    "Bathrooms",
+    "Full villa refits"
+   ]
+  },
+  "ar": {
+   "name": "السيراميك وتصميم المطابخ",
+   "short": "بلاط وحمامات ومطابخ",
+   "desc": "الأرضيات والجدران والحمامات والمطابخ — تصميم وتوريد وتركيب من فريق واحد، بمنتجات عالية الجودة من شركائنا التجاريين.",
+   "items": [
+    "تبليط السيراميك والبورسلين والرخام",
+    "تجديد الحمامات",
+    "تصميم مطابخ حسب الطلب",
+    "الخزائن وأسطح العمل",
+    "تركيب المغاسل والأجهزة",
+    "العزل المائي والترويب"
+   ],
+   "ideal": [
+    "المطابخ",
+    "الحمامات",
+    "تجديد الفلل بالكامل"
+   ]
+  }
+ }
+]

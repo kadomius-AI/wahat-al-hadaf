@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:image" content="https://w-alhadaf.com/assets/build/stage-4-complete-2000.webp">
+  <meta name="theme-color" content="#0f2a1d">
+  <link rel="canonical" href="https://w-alhadaf.com/{{CANONICAL}}">
+  <link rel="icon" href="assets/logo-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+{{HEAD_EXTRA}}  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="{{PAGE}}">
+
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand" aria-label="Wahat Al Hadaf, home">
+      <img src="assets/logo-clean.png" alt="Wahat Al Hadaf Technical Services" width="480" height="318">
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Main">
+      <a href="services.html"{{CUR_services}} data-i18n="nav.services">Services</a>
+      <a href="plans.html"{{CUR_plans}} data-i18n="nav.plans">Plans</a>
+      <a href="about.html"{{CUR_about}} data-i18n="nav.about">About</a>
+      <a href="contact.html"{{CUR_contact}} data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav__end">
+      <button class="lang" id="langToggle" type="button" lang="ar">عربي</button>
+      <a href="tel:+97142962283" class="btn btn--small nav__cta" data-i18n="nav.call">Call us</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">

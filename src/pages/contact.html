@@ -1,0 +1,53 @@
+
+<section class="pagehead">
+  <div class="wrap pagehead__grid">
+    <div>
+      <p class="crumb"><a href="index.html" data-i18n="nav.home">Home</a> <span aria-hidden="true">/</span> <span data-i18n="nav.contact">Contact</span></p>
+      <h1 data-i18n="contact.title">Let’s get your project moving</h1>
+      <p class="pagehead__lead" data-i18n="contact.lead">Tell us what you need and we’ll come back with a plan.</p>
+    </div>
+    <dl class="titleblock" aria-label="Summary">
+      <div><dt data-i18n="contact.phone">Phone</dt><dd><a href="tel:+97142962283" dir="ltr">+971 4 296 2283</a></dd></div>
+      <div><dt>WhatsApp</dt><dd><a href="https://wa.me/971509015012" target="_blank" rel="noopener" dir="ltr">+971 50 901 5012</a></dd></div>
+      <div><dt data-i18n="contact.email">Email</dt><dd><a href="mailto:info@w-alhadaf.com">info@w-alhadaf.com</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section contact">
+  <div class="wrap contact__grid">
+    <form class="form" id="quoteForm" novalidate>
+      <h2 data-i18n="form.title">Request a quote</h2>
+      <label><span data-i18n="form.name">Your name</span><input name="name" type="text" autocomplete="name" required></label>
+      <label><span data-i18n="form.phone">Phone</span><input name="phone" type="tel" autocomplete="tel" required dir="ltr"></label>
+      <label><span data-i18n="form.service">Service</span><select name="service" id="serviceSelect" required></select></label>
+      <label><span data-i18n="form.plan">Plan</span>
+        <select name="plan" id="planSelect">
+          <option value="" data-i18n="form.plan.none">Not sure yet</option>
+          <option value="one-time" data-i18n="plans.p1.t">One-time job</option>
+          <option value="amc" data-i18n="plans.p2.t">Annual Maintenance Contract</option>
+          <option value="turnkey" data-i18n="plans.p3.t">Turnkey project</option>
+        </select>
+      </label>
+      <label><span data-i18n="form.details">Project details</span><textarea name="details" rows="4" data-i18n-ph="form.ph"></textarea></label>
+      <p class="form__error" id="formError" role="alert" hidden data-i18n="form.error">Add your name, phone and a service so we can reply.</p>
+      <button class="btn btn--block" type="submit" data-i18n="form.send">Send on WhatsApp</button>
+      <p class="form__note" data-i18n="form.note">This opens WhatsApp with your details filled in. Prefer email? <a href="mailto:info@w-alhadaf.com">info@w-alhadaf.com</a></p>
+    </form>
+
+    <div class="visit">
+      <h2 data-i18n="contact.visit">Visit the office</h2>
+      <dl class="contact__list">
+        <div><dt data-i18n="contact.office">Office</dt><dd data-i18n="contact.address">City Gate Building, Office M02-01<br>Port Saeed, Deira, Dubai, UAE</dd></div>
+        <div><dt data-i18n="contact.phone">Phone</dt><dd><a href="tel:+97142962283" dir="ltr">+971 4 296 2283</a></dd></div>
+        <div><dt data-i18n="contact.mobile">Mobile / WhatsApp</dt><dd><a href="https://wa.me/971509015012" target="_blank" rel="noopener" dir="ltr">+971 50 901 5012</a></dd></div>
+        <div><dt data-i18n="contact.email">Email</dt><dd><a href="mailto:info@w-alhadaf.com">info@w-alhadaf.com</a></dd></div>
+        <div><dt data-i18n="contact.fax">Fax</dt><dd dir="ltr">+971 4 296 2285</dd></div>
+      </dl>
+      <div class="map">
+        <iframe title="Map: City Gate Building, Port Saeed, Dubai" src="https://www.google.com/maps?q=City+Gate+Building+Port+Saeed+Deira+Dubai&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=City+Gate+Building+Port+Saeed+Deira+Dubai" target="_blank" rel="noopener" data-i18n="contact.directions">Open directions in Google Maps</a>
+    </div>
+  </div>
+</section>

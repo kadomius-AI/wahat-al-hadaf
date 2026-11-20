@@ -1,0 +1,98 @@
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <h1 class="hero__title" data-i18n="hero.title">Think of us as your team.</h1>
+      <p class="hero__lead" data-i18n="hero.lead">A Dubai technical services contractor since 2014. Maintenance, pools, gardens, paving, gypsum and kitchens, handled by one crew and one phone number.</p>
+      <div class="hero__actions">
+        <a href="contact.html" class="btn" data-i18n="hero.cta1">Request a quote</a>
+        <a href="services.html" class="link" data-i18n="hero.cta2">See what we do</a>
+      </div>
+    </div>
+    <figure class="hero__photo">
+      <img src="assets/site/rebar-crew.webp" alt="A Wahat Al Hadaf crew fixing reinforcement inside footing formwork on a Dubai site" width="1200" height="1600" fetchpriority="high">
+      <figcaption data-i18n="hero.caption">Our crew on site in Dubai</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FROM BLUEPRINT TO REALITY (standalone, see build-section.js) -->
+<section class="build" id="build" aria-labelledby="buildTitle">
+  <div class="build__stage">
+    <div class="build__camera">
+      <img class="build__frame" data-frame="0" alt="" decoding="async" fetchpriority="high"
+           src="assets/build/stage-1-blueprint-2000.webp"
+           srcset="assets/build/stage-1-blueprint-1100.webp 1100w, assets/build/stage-1-blueprint-2000.webp 2000w" sizes="100vw">
+      <img class="build__frame" data-frame="1" alt="" decoding="async"
+           src="assets/build/stage-2-structure-2000.webp"
+           srcset="assets/build/stage-2-structure-1100.webp 1100w, assets/build/stage-2-structure-2000.webp 2000w" sizes="100vw">
+      <img class="build__frame" data-frame="2" alt="" decoding="async"
+           src="assets/build/stage-3-envelope-2000.webp"
+           srcset="assets/build/stage-3-envelope-1100.webp 1100w, assets/build/stage-3-envelope-2000.webp 2000w" sizes="100vw">
+      <img class="build__frame" data-frame="3" alt="A completed contemporary villa at dusk with a lit pool, palms and an interlock driveway" decoding="async"
+           src="assets/build/stage-4-complete-2000.webp"
+           srcset="assets/build/stage-4-complete-1100.webp 1100w, assets/build/stage-4-complete-2000.webp 2000w" sizes="100vw">
+      <span class="build__scan" aria-hidden="true"></span>
+    </div>
+    <div class="build__shade" aria-hidden="true"></div>
+
+    <ol class="build__steps" aria-label="Project stages">
+      <li class="is-active"><span>1</span><b data-i18n="build.s1">Drawing</b></li>
+      <li><span>2</span><b data-i18n="build.s2">Structure</b></li>
+      <li><span>3</span><b data-i18n="build.s3">Envelope</b></li>
+      <li><span>4</span><b data-i18n="build.s4">Handover</b></li>
+      <i class="build__bar" aria-hidden="true"><i></i></i>
+    </ol>
+
+    <div class="build__end">
+      <h2 id="buildTitle" class="build__title" data-i18n="build.title">From Vision to Reality</h2>
+      <p class="build__sub" data-i18n="build.sub">Pools, landscapes, paving, gypsum and fit-out, delivered by one team from the first line on paper to the day you move in.</p>
+      <a href="services.html" class="btn btn--light" data-i18n="build.cta">Explore Our Projects</a>
+    </div>
+  </div>
+</section><!-- WHAT WE DO -->
+<section class="section">
+  <div class="wrap">
+    <div class="split-head">
+      <h2 data-i18n="home.trades.title">Six trades under one roof</h2>
+      <p class="section__lead" data-i18n="home.trades.lead">One contractor for the whole property, so you never chase five different companies.</p>
+    </div>
+    <ul class="trades">
+{{HOME_TRADES}}
+    </ul>
+    <p class="more"><a class="link" href="services.html" data-i18n="home.trades.all">All services in detail</a></p>
+  </div>
+</section>
+
+<!-- ON SITE -->
+<section class="section section--rule onsite">
+  <div class="wrap">
+    <div class="split-head">
+      <h2 data-i18n="home.site.title">Recent work on site</h2>
+      <p class="section__lead" data-i18n="home.site.lead">Foundations for a residential project in Dubai: formwork, reinforcement and the pour, all by our own team.</p>
+    </div>
+    <div class="onsite__grid">
+      <figure class="onsite__a"><img src="assets/site/formwork-villas.webp" alt="Rows of timber footing formwork with reinforcement, villas behind" width="1200" height="900" loading="lazy"><figcaption data-i18n="home.site.c1">Footing formwork set out</figcaption></figure>
+      <figure class="onsite__b"><img src="assets/site/pour.webp" alt="Crew levelling freshly poured concrete in a footing" width="720" height="960" loading="lazy"><figcaption data-i18n="home.site.c2">Concrete poured and levelled</figcaption></figure>
+      <figure class="onsite__c"><img src="assets/site/cages.webp" alt="Close-up of tied reinforcement cages inside formwork" width="720" height="1296" loading="lazy"><figcaption data-i18n="home.site.c3">Reinforcement cages tied</figcaption></figure>
+    </div>
+    <p class="more"><a class="link" href="https://www.instagram.com/wahatalhadaf" target="_blank" rel="noopener" data-i18n="home.site.ig">More on Instagram</a></p>
+  </div>
+</section>
+
+<!-- PLANS TEASER -->
+<section class="section section--rule">
+  <div class="wrap teaser">
+    <div>
+      <h2 data-i18n="home.plans.title">A single repair, or the whole year covered</h2>
+      <p class="section__lead" data-i18n="home.plans.lead">Book a one-time job, sign an Annual Maintenance Contract, or hand us a turnkey project.</p>
+    </div>
+    <ul class="teaser__list">
+      <li><b data-i18n="plans.p1.t">One-time job</b><span data-i18n="home.plans.p1">Visit, quote, done.</span></li>
+      <li><b data-i18n="plans.p2.t">Annual Maintenance Contract</b><span data-i18n="home.plans.p2">Scheduled checks and priority repairs.</span></li>
+      <li><b data-i18n="plans.p3.t">Turnkey project</b><span data-i18n="home.plans.p3">Design, supply and build in one contract.</span></li>
+    </ul>
+    <a class="btn" href="plans.html" data-i18n="home.plans.cta">Compare plans</a>
+  </div>
+</section>
