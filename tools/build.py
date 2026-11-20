@@ -6,6 +6,7 @@ src/pages/<page>.html  + src/partials/{header,footer}.html  + data/services.json
 
 Run:  python3 tools/build.py
 """
+import hashlib
 import html
 import json
 import re
@@ -131,6 +132,17 @@ def services_data_js():
     )
 
 
+def bust(page_html):
+    """Append ?v=<content hash> to local CSS/JS so browsers and GitHub's CDN pick up changes at once."""
+    def ver(m):
+        path = ROOT / m.group(2)
+        if not path.exists():
+            return m.group(0)
+        h = hashlib.sha1(path.read_bytes()).hexdigest()[:8]
+        return f'{m.group(1)}{m.group(2)}?v={h}"'
+    return re.sub(r'((?:href|src)=")([a-z0-9-]+\.(?:css|js))"', ver, page_html)
+
+
 def build():
     header = (SRC / "partials/header.html").read_text()
     footer = (SRC / "partials/footer.html").read_text()
@@ -139,6 +151,7 @@ def build():
         "{{SERVICES_INDEX}}": services_index(),
         "{{SERVICES_SHEETS}}": services_sheets(),
     }
+    (ROOT / "services-data.js").write_text(services_data_js())
     for page, cfg in PAGES.items():
         body = (SRC / f"pages/{page}.html").read_text()
         for k, v in blocks.items():
@@ -159,6 +172,7 @@ def build():
         tags += [SCRIPT_TAGS[s] for s in cfg.get("scripts", []) if s != "gsap"]
         f = f.replace("{{SCRIPTS}}", "\n".join(tags))
         out = h + body + f
+        out = bust(out)
         leftover = re.findall(r"\{\{[A-Z_a-z]+\}\}", out)
         assert not leftover, f"{page}: unreplaced {leftover}"
         (ROOT / f"{page}.html").write_text(out)
