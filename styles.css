@@ -34,7 +34,7 @@ body {
 }
 html[lang="ar"] body { font-family: var(--arabic); line-height: 1.8; }
 ::selection { background: var(--lime); color: var(--forest); }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1px; }
 h1, h2, h3, h4, p { margin: 0; }
 h1, h2 { font-weight: 600; font-stretch: 112%; letter-spacing: -.025em; line-height: 1.04; text-wrap: balance; }
@@ -436,6 +436,9 @@ html[lang="ar"] .sheet__title { font-stretch: normal; letter-spacing: 0; }
   .steps li, .steps li + li, html[dir="rtl"] .steps li { padding: 1.1rem 0; border-inline-start: 0; border-bottom: 1px solid var(--line); }
   .contact__list > div { grid-template-columns: 1fr; gap: .1rem; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
+  .footer { padding-bottom: 6.5rem; }
+  .wa-float { width: 50px; height: 50px; inset-inline-end: 14px; bottom: 14px; }
+  .wa-float svg { width: 25px; height: 25px; }
   .footer__brand { grid-column: 1 / -1; }
 }
 @media (prefers-reduced-motion: reduce) {
