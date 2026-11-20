@@ -5,18 +5,22 @@
 
   let lang = 'en';
 
-  /* Language. English by default; Arabic via the toggle or ?lang=ar, carried across pages. */
+  /* Language lives in the address: /services is English, /ar/services is Arabic.
+     Page links are relative, so they stay in whichever language the address is in. */
   $$('[data-i18n]').forEach((el) => { el.dataset.en = el.innerHTML; });
 
-  function syncLinks() {
-    $$('a[href]').forEach((a) => {
-      const href = a.getAttribute('href');
-      if (!/^[a-z-]+\.html/.test(href)) return; // internal pages only
-      const url = new URL(href, location.href);
-      lang === 'ar' ? url.searchParams.set('lang', 'ar') : url.searchParams.delete('lang');
-      a.setAttribute('href', url.pathname.split('/').pop() + url.search + url.hash);
-    });
-  }
+  const AR_PATH = /^\/ar(\/|$)/;
+  const cleanPath = (p) => p.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+  const pathFor = (target) => {
+    const p = cleanPath(location.pathname).replace(AR_PATH, '/');
+    return target === 'ar' ? '/ar' + p : p;
+  };
+  const go = (target) => {
+    const url = new URL(location.href);
+    url.pathname = pathFor(target);
+    url.searchParams.delete('lang');
+    history.replaceState(null, '', url);
+  };
 
   function setLang(next) {
     lang = next;
@@ -42,15 +46,13 @@
 
     renderSelect();
     labelTable();
-    syncLinks();
     document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
   }
 
   $('#langToggle').addEventListener('click', () => {
-    setLang(lang === 'en' ? 'ar' : 'en');
-    const url = new URL(location.href);
-    lang === 'ar' ? url.searchParams.set('lang', 'ar') : url.searchParams.delete('lang');
-    history.replaceState(null, '', url);
+    const next = lang === 'en' ? 'ar' : 'en';
+    go(next);
+    setLang(next);
   });
 
   /* Plans comparison: each cell carries its column name, so phones can show rows as stacked lists */
@@ -141,7 +143,7 @@
   if (shareBtn) {
     shareBtn.addEventListener('click', async () => {
       const toast = $('#shareToast');
-      const data = { title: UI[lang].title, url: location.origin + '/' };
+      const data = { title: UI[lang].title, url: location.origin + (lang === 'ar' ? '/ar/' : '/') };
       try {
         if (navigator.share) { await navigator.share(data); return; }
         await navigator.clipboard.writeText(data.url);
@@ -153,5 +155,8 @@
 
   /* Init */
   $('#year').textContent = new Date().getFullYear();
-  setLang(params.get('lang') === 'ar' ? 'ar' : 'en');
+  // Old links (?lang=ar, index.html, *.html) are tidied into the clean address on arrival.
+  const start = AR_PATH.test(location.pathname) || params.get('lang') === 'ar' ? 'ar' : 'en';
+  if (start !== (AR_PATH.test(location.pathname) ? 'ar' : 'en') || params.has('lang') || /\.html$/.test(location.pathname)) go(start);
+  setLang(start);
 })();

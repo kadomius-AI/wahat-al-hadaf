@@ -143,6 +143,44 @@ def bust(page_html):
     return re.sub(r'((?:href|src)=")([a-z0-9-]+\.(?:css|js))"', ver, page_html)
 
 
+SITE = "https://w-alhadaf.com"
+SLUG = {"index": "", "services": "services", "plans": "plans", "about": "about", "contact": "contact"}
+
+
+def clean_links(page_html):
+    """Page links without .html: index.html -> ./ , services.html#x -> services#x (GitHub Pages serves both)."""
+    def repl(m):
+        name, rest = m.group(1), m.group(2) or ""
+        return f'href="{"./" if name == "index" else name}{rest}"'
+    return re.sub(r'href="(index|services|plans|about|contact)\.html([?#][^"]*)?"', repl, page_html)
+
+
+def root_assets(page_html):
+    """Root-relative asset paths so the same markup works at / and /ar/."""
+    page_html = re.sub(r'(["\s,])assets/', r'\1/assets/', page_html)
+    return re.sub(r'((?:href|src)=")([a-z0-9-]+\.(?:css|js))', r'\1/\2', page_html)
+
+
+def bust(page_html):
+    """Append ?v=<content hash> to local CSS/JS so browsers and GitHub's CDN pick up changes at once."""
+    def ver(m):
+        path = ROOT / m.group(2)
+        if not path.exists():
+            return m.group(0)
+        h = hashlib.sha1(path.read_bytes()).hexdigest()[:8]
+        return f'{m.group(1)}{m.group(2)}?v={h}"'
+    return re.sub(r'((?:href|src)="/)([a-z0-9-]+\.(?:css|js))"', ver, page_html)
+
+
+def alternates(page, lang):
+    slug = SLUG[page]
+    en, ar = f"{SITE}/{slug}", f"{SITE}/ar/{slug}"
+    return (f'  <link rel="canonical" href="{ar if lang == "ar" else en}">\n'
+            f'  <link rel="alternate" hreflang="en" href="{en}">\n'
+            f'  <link rel="alternate" hreflang="ar" href="{ar}">\n'
+            f'  <link rel="alternate" hreflang="x-default" href="{en}">')
+
+
 def build():
     header = (SRC / "partials/header.html").read_text()
     footer = (SRC / "partials/footer.html").read_text()
@@ -152,6 +190,7 @@ def build():
         "{{SERVICES_SHEETS}}": services_sheets(),
     }
     (ROOT / "services-data.js").write_text(services_data_js())
+    (ROOT / "ar").mkdir(exist_ok=True)
     for page, cfg in PAGES.items():
         body = (SRC / f"pages/{page}.html").read_text()
         for k, v in blocks.items():
@@ -171,12 +210,17 @@ def build():
         tags += ['<script src="i18n.js"></script>', '<script src="services-data.js"></script>', '<script src="script.js"></script>']
         tags += [SCRIPT_TAGS[s] for s in cfg.get("scripts", []) if s != "gsap"]
         f = f.replace("{{SCRIPTS}}", "\n".join(tags))
-        out = h + body + f
-        out = bust(out)
-        leftover = re.findall(r"\{\{[A-Z_a-z]+\}\}", out)
-        assert not leftover, f"{page}: unreplaced {leftover}"
-        (ROOT / f"{page}.html").write_text(out)
-        print("built", f"{page}.html")
+        base = bust(root_assets(clean_links(h + body + f)))
+        for lang in ("en", "ar"):
+            out = base.replace("{{ALTERNATES}}", alternates(page, lang))
+            if lang == "ar":
+                # Arabic copies: same markup, rendered right-to-left from the first paint; script.js swaps the text.
+                out = out.replace('<html lang="en" dir="ltr">', '<html lang="ar" dir="rtl">', 1)
+            leftover = re.findall(r"\{\{[A-Z_a-z]+\}\}", out)
+            assert not leftover, f"{page}: unreplaced {leftover}"
+            dest = ROOT / ("ar" if lang == "ar" else "") / f"{page}.html"
+            dest.write_text(out)
+            print("built", dest.relative_to(ROOT))
     (ROOT / "services-data.js").write_text(services_data_js())
     print("built services-data.js")
 
