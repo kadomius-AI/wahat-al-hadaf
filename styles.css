@@ -421,6 +421,17 @@ html[lang="ar"] .sheet__title { font-stretch: normal; letter-spacing: 0; }
   .sheet__list { grid-template-columns: 1fr; }
   .amc__list > div, .tenets > div { grid-template-columns: 1fr; gap: .2rem; }
   .titleblock > div { grid-template-columns: 6.5rem 1fr; }
+  .cmp { background: transparent; overflow: visible; }
+  .cmp table { min-width: 0; }
+  .cmp thead { display: none; }
+  .cmp table, .cmp tbody, .cmp tr, .cmp th, .cmp td { display: block; width: auto; }
+  .cmp tr { margin-bottom: .8rem; padding: .4rem 1rem .6rem; border-radius: var(--r-md); background: var(--white); }
+  .cmp tbody th { width: auto; padding: .7rem 0 .5rem; border-bottom: 1px solid var(--line); font-weight: 600; }
+  .cmp td { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 0; border: 0; text-align: end; }
+  .cmp td::before { content: attr(data-label); color: var(--muted); font-weight: 400; text-align: start; }
+  .cmp td.is-main { background: transparent; }
+  .cmp tr:last-child > * { border-bottom: 0; }
+  .cmp tr:last-child th { border-bottom: 1px solid var(--line); }
   body { font-size: 16px; }
   .nav__inner { height: 72px; }
   .nav__brand img { height: 50px; }

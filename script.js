@@ -41,6 +41,7 @@
     btn.setAttribute('aria-label', ar ? 'View the site in English' : 'عرض الموقع بالعربية');
 
     renderSelect();
+    labelTable();
     syncLinks();
     document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
   }
@@ -51,6 +52,14 @@
     lang === 'ar' ? url.searchParams.set('lang', 'ar') : url.searchParams.delete('lang');
     history.replaceState(null, '', url);
   });
+
+  /* Plans comparison: each cell carries its column name, so phones can show rows as stacked lists */
+  function labelTable() {
+    $$('.cmp table').forEach((t) => {
+      const heads = $$('thead th', t).map((th) => th.textContent.trim());
+      $$('tbody tr', t).forEach((tr) => $$('td', tr).forEach((td, i) => { td.dataset.label = heads[i + 1] || ''; }));
+    });
+  }
 
   /* Quote form (contact page), sent through WhatsApp */
   const form = $('#quoteForm');
